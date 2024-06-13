@@ -1,0 +1,432 @@
+                                   MODFLOW 6
+                U.S. GEOLOGICAL SURVEY MODULAR HYDROLOGIC MODEL
+                          GROUNDWATER FLOW MODEL (GWF)
+                            VERSION 6.4.4 02/13/2024
+
+   MODFLOW 6 compiled Feb 13 2024 15:40:13 with Intel(R) Fortran Intel(R) 64
+   Compiler Classic for applications running on Intel(R) 64, Version 2021.7.0
+                             Build 20220726_000000
+
+This software has been approved for release by the U.S. Geological 
+Survey (USGS). Although the software has been subjected to rigorous 
+review, the USGS reserves the right to update the software as needed 
+pursuant to further analysis and review. No warranty, expressed or 
+implied, is made by the USGS or the U.S. Government as to the 
+functionality of the software and related material nor shall the 
+fact of release constitute any such warranty. Furthermore, the 
+software is released on condition that neither the USGS nor the U.S. 
+Government shall be held liable for any damages resulting from its 
+authorized or unauthorized use. Also refer to the USGS Water 
+Resources Software User Rights Notice for complete use, copyright, 
+and distribution information.
+
+
+As a work of the United States Government, this USGS product is 
+in the public domain within the United States. You can copy, 
+modify, distribute, and perform the work, even for commercial 
+purposes, all without asking permission. Additionally, USGS 
+waives copyright and related rights in the work worldwide 
+through CC0 1.0 Universal Public Domain Dedication 
+(https://creativecommons.org/publicdomain/zero/1.0/).
+
+The following GNU Lesser General Public License (LGPL) libraries
+are used in this USGS product:
+
+    SPARSKIT version 2.0
+      ilut, luson, and qsplit 
+      (https://www-users.cse.umn.edu/~saad/software/SPARSKIT/)
+
+    RCM - Reverse Cuthill McKee Ordering
+      (https://people.math.sc.edu/Burkardt/f_src/rcm/rcm.html)
+
+    BLAS - Basic Linear Algebra Subprograms Level 1
+      (https://people.math.sc.edu/Burkardt/f_src/blas1_d/blas1_d.html)
+
+    SPARSEKIT - Sparse Matrix Utility Package
+      amux, dperm, dvperm, rperm, and cperm
+      (https://people.sc.fsu.edu/~jburkardt/f77_src/sparsekit/sparsekit.html)
+
+The following BSD-3 License libraries are used in this USGS product:
+
+    Modern Fortran DAG Library
+      Copyright (c) 2018, Jacob Williams
+      All rights reserved.
+      (https://github.com/jacobwilliams/daglib)
+
+MODFLOW 6 compiler options: /Isrc\libmf6core.a.p /Isrc /I..\src
+/Isrc\libmf6_external.a.p /MTd /nologo /warn:general /warn:truncated_source
+/stand:f08 /Zi /traceback /O2 /fpe:0 /heap-arrays:0 /traceback /fpp
+/Qdiag-disable:7416 /Qdiag-disable:7025 /Qdiag-disable:5268
+/Fdsrc\libmf6core.a.p\Utilities_compilerversion.F90.pdb
+/module:src\libmf6core.a.p
+/Fosrc/libmf6core.a.p/Utilities_compilerversion.F90.obj /c
+
+System command used to initiate simulation:
+c:\Users\liuy03\AppData\Local\anaconda3\envs\gmdsitut\python.exe -m ipykernel_launcher --f=c:\Users\liuy03\AppData\Roaming\jupyter\runtime\kernel-v2-1908sD0siqy17TBk.json
+
+MODFLOW was compiled using uniform precision.
+
+Real Variables
+  KIND: 8
+  TINY (smallest non-zero value):    2.225074-308
+  HUGE (largest value):    1.797693+308
+  PRECISION: 15
+  SIZE IN BITS: 64
+
+Integer Variables
+  KIND: 4
+  HUGE (largest value): 2147483647
+  SIZE IN BITS: 32
+
+Long Integer Variables
+  KIND: 8
+  HUGE (largest value): 9223372036854775807
+  SIZE IN BITS: 64
+
+Logical Variables
+  KIND: 4
+  SIZE IN BITS: 32
+ 
+ NAMEFILE OPTIONS:
+    NEWTON-RAPHSON method enabled for the model.
+    NEWTON-RAPHSON UNDER-RELAXATION based on the bottom elevation of the model will be applied to the model.
+    STRESS PACKAGE INPUT WILL BE PRINTED FOR ALL MODEL STRESS PACKAGES
+    PACKAGE FLOWS WILL BE PRINTED FOR ALL MODEL PACKAGES
+    FLOWS WILL BE SAVED TO BUDGET FILE SPECIFIED IN OUTPUT CONTROL
+ END NAMEFILE OPTIONS:
+
+ DIS -- STRUCTURED GRID DISCRETIZATION PACKAGE, VERSION 2 : 3/27/2014 - INPUT READ FROM MEMPATH: __INPUT__/TEST_MODEL/DIS                          
+
+
+ NPF -- NODE PROPERTY FLOW PACKAGE, VERSION 1, 3/30/2015 INPUT READ FROM MEMPATH: __INPUT__/TEST_MODEL/NPF                          
+
+
+ IC -- Initial Conditions Package, Version 8, 3/28/2015 input read from mempath: __INPUT__/TEST_MODEL/IC                           
+
+
+ Setting Discretization Options
+    Model length unit [0=UND, 1=FEET, 2=METERS, 3=CENTIMETERS] set as 2
+ End Setting Discretization Options
+
+ Setting Discretization Dimensions
+    NLAY = 1
+    NROW = 10
+    NCOL = 10
+ End Setting Discretization Dimensions
+
+ Setting Discretization Griddata
+    DELR set from input file
+    DELC set from input file
+    TOP set from input file
+    BOTM set from input file
+    IDOMAIN set from input file
+ End Setting Discretization Griddata
+
+
+ The specified IDOMAIN results in a reduced number of cells.
+ Number of user nodes: 100
+ Number of nodes in solution: 88
+
+
+ Setting NPF Options
+    Specific discharge will be calculated at cell centers and written to DATA-SPDIS in budget file when requested.
+ End Setting NPF Options
+
+ Setting NPF Griddata
+    ICELLTYPE set from input file
+    K set from input file
+    K33 not provided.  Setting K33 = K.
+    K22 not provided.  Setting K22 = K.
+ End Setting NPF Griddata
+
+
+ WEL   -- WEL PACKAGE, VERSION 8, 2/22/2014 INPUT READ FROM MEMPATH: __INPUT__/TEST_MODEL/WEL_0                        
+
+ PROCESSING WEL BASE OPTIONS
+ END OF WEL BASE OPTIONS
+
+ PROCESSING WEL OPTIONS
+ END OF WEL OPTIONS
+
+ PROCESSING WEL BASE DIMENSIONS
+    MAXBOUND =      10
+ END OF WEL BASE DIMENSIONS
+
+ DRN   -- DRN PACKAGE, VERSION 8, 2/22/2014 INPUT READ FROM MEMPATH: __INPUT__/TEST_MODEL/DRN_0                        
+
+ PROCESSING DRN BASE OPTIONS
+ END OF DRN BASE OPTIONS
+
+ PROCESSING DRN OPTIONS
+ END OF DRN OPTIONS
+
+ PROCESSING DRN BASE DIMENSIONS
+    MAXBOUND =       2
+ END OF DRN BASE DIMENSIONS
+
+ RCH   -- RCH PACKAGE, VERSION 8, 2/22/2014 INPUT READ FROM MEMPATH: __INPUT__/TEST_MODEL/RCH_0                        
+
+ PROCESSING RCH BASE OPTIONS
+ END OF RCH BASE OPTIONS
+
+ PROCESSING RCH OPTIONS
+ END OF RCH OPTIONS
+
+ PROCESSING RCH BASE DIMENSIONS
+    MAXBOUND =       2
+ END OF RCH BASE DIMENSIONS
+
+ RCH   -- RCH PACKAGE, VERSION 8, 2/22/2014 INPUT READ FROM MEMPATH: __INPUT__/TEST_MODEL/RCHA_0                       
+
+ PROCESSING RCH BASE OPTIONS
+ END OF RCH BASE OPTIONS
+
+ PROCESSING RCHA OPTIONS
+    RECHARGE INPUT WILL BE READ AS ARRAY(S).
+ END OF RCHA OPTIONS
+
+ EVT   -- EVT PACKAGE, VERSION 8, 2/22/2014 INPUT READ FROM MEMPATH: __INPUT__/TEST_MODEL/EVT_0                        
+
+ PROCESSING EVT BASE OPTIONS
+ END OF EVT BASE OPTIONS
+
+ PROCESSING EVT OPTIONS
+ END OF EVT OPTIONS
+
+ PROCESSING EVT BASE DIMENSIONS
+    MAXBOUND =       2
+ END OF EVT BASE DIMENSIONS
+
+ PROCESSING EVT DIMENSIONS
+ END OF EVT DIMENSIONS
+
+ CHD   -- CHD PACKAGE, VERSION 8, 2/22/2014 INPUT READ FROM MEMPATH: __INPUT__/TEST_MODEL/CHD_0                        
+
+ PROCESSING CHD BASE OPTIONS
+ END OF CHD BASE OPTIONS
+
+ PROCESSING CHD BASE DIMENSIONS
+    MAXBOUND =      12
+ END OF CHD BASE DIMENSIONS
+    STRT set from input file
+
+ STO -- STORAGE PACKAGE, VERSION 1, 5/19/2014 INPUT READ FROM UNIT 1006
+
+
+ # File generated by Flopy version 3.3.6 on 10/07/2022 at 11:12:19.
+ PROCESSING STORAGE OPTIONS
+ END OF STORAGE OPTIONS
+ PROCESSING GRIDDATA
+
+                 ICONVERT = 1
+
+         SPECIFIC STORAGE =  0.1000000E-04
+
+           SPECIFIC YIELD =  0.1500000    
+ END PROCESSING GRIDDATA
+    BINARY GRID INFORMATION WILL BE WRITTEN TO:
+      UNIT NUMBER: 1021
+      FILE NAME: test_model.dis.grb
+
+ OPENED test_model.dis.grb
+ FILE TYPE:DATA(BINARY)   UNIT 1021   STATUS:REPLACE             
+ FORMAT:UNFORMATTED            ACCESS:STREAM              
+ ACTION:READWRITE           
+
+      THE LAST TIME STEP WILL BE PRINTED
+      THE LAST TIME STEP WILL BE PRINTED
+ # File generated by Flopy version 3.3.6 on 10/07/2022 at 11:12:19.
+
+ PROCESSING OC OPTIONS
+
+    BUDGET INFORMATION WILL BE WRITTEN TO:
+      UNIT NUMBER: 1022
+      FILE NAME: test_model.cbc
+
+ OPENED test_model.cbc
+ FILE TYPE:DATA(BINARY)   UNIT 1022   STATUS:REPLACE             
+ FORMAT:UNFORMATTED            ACCESS:STREAM              
+ ACTION:READWRITE           
+
+    HEAD INFORMATION WILL BE WRITTEN TO:
+      UNIT NUMBER: 1023
+      FILE NAME: test_model.hds
+
+ OPENED test_model.hds
+ FILE TYPE:DATA(BINARY)   UNIT 1023   STATUS:REPLACE             
+ FORMAT:UNFORMATTED            ACCESS:STREAM              
+ ACTION:READWRITE           
+
+ END OF OC OPTIONS
+
+start timestep kper="1" kstp="1" mode="normal"
+
+
+ BEGIN READING OUTPUT CONTROL FOR STRESS PERIOD 1
+      ALL TIME STEPS WILL BE SAVED
+      ALL TIME STEPS WILL BE SAVED
+      ALL TIME STEPS WILL BE PRINTED
+      ALL TIME STEPS WILL BE PRINTED
+
+ END READING OUTPUT CONTROL FOR STRESS PERIOD 1
+
+
+ STRESS PERIOD 1 IS TRANSIENT
+
+ --------------------------------------------------------------------
+  WEL NO.    LAYER    ROW     COL        TEST1            TEST2      
+ --------------------------------------------------------------------
+     1         1       5       9     1.00000000       2.00000000     
+     2         1       1       8     1.00000000       2.00000000     
+     3         1       3      10     1.00000000       2.00000000     
+ --------------------------------------------------------------------
+
+
+ ----------------------------------
+  DRN NO.    LAYER    ROW     COL  
+ ----------------------------------
+     1         1       1       8   
+     2         1       1       9   
+ ----------------------------------
+
+
+ ----------------------------------
+  RCH NO.    LAYER    ROW     COL  
+ ----------------------------------
+     1         1       9       3   
+     2         1       9       4   
+ ----------------------------------
+
+
+ ----------------------------------
+  RCH NO.    LAYER    ROW     COL  
+ ----------------------------------
+     1        -1      -1      -1   
+     2        -1      -1      -1   
+     3         1       1       1   
+     4         1       1       2   
+     5         1       1       3   
+     6         1       1       4   
+     7         1       1       5   
+     8         1       1       6   
+     9        -1      -1      -1   
+     10       -1      -1      -1   
+     11       -1      -1      -1   
+     12        1       1       7   
+     13        1       1       8   
+     14        1       1       9   
+     15        1       1      10   
+     16        1       2       1   
+     17        1       2       2   
+     18        1       2       3   
+     19        1       2       4   
+     20       -1      -1      -1   
+     21        1       2       5   
+     22        1       2       6   
+     23        1       2       7   
+     24        1       2       8   
+     25        1       2       9   
+     26        1       2      10   
+     27        1       3       1   
+     28        1       3       2   
+     29        1       3       3   
+     30        1       3       4   
+     31        1       3       5   
+     32        1       3       6   
+     33        1       3       7   
+     34        1       3       8   
+     35        1       3       9   
+     36        1       3      10   
+     37        1       4       1   
+     38        1       4       2   
+     39        1       4       3   
+     40        1       4       4   
+     41        1       4       5   
+     42        1       4       6   
+     43        1       4       7   
+     44        1       4       8   
+     45        1       4       9   
+     46        1       4      10   
+     47        1       5       1   
+     48        1       5       2   
+     49        1       5       3   
+     50        1       5       4   
+     51        1       5       5   
+     52        1       5       6   
+     53        1       5       7   
+     54        1       5       8   
+     55        1       5       9   
+     56        1       5      10   
+     57        1       6       1   
+     58        1       6       2   
+     59        1       6       3   
+     60        1       6       4   
+     61        1       6       5   
+     62        1       6       6   
+     63        1       6       7   
+     64        1       6       8   
+     65        1       6       9   
+     66        1       6      10   
+     67        1       7       1   
+     68        1       7       2   
+     69        1       7       3   
+     70        1       7       4   
+     71        1       7       5   
+     72        1       7       6   
+     73        1       7       7   
+     74        1       7       8   
+     75        1       7       9   
+     76        1       7      10   
+     77        1       8       1   
+     78        1       8       2   
+     79        1       8       3   
+     80        1       8       4   
+     81       -1      -1      -1   
+     82        1       8       5   
+     83        1       8       6   
+     84        1       8       7   
+     85        1       8       8   
+     86        1       8       9   
+     87        1       8      10   
+     88        1       9       1   
+     89        1       9       2   
+     90       -1      -1      -1   
+     91       -1      -1      -1   
+     92       -1      -1      -1   
+     93        1       9       3   
+     94        1       9       4   
+     95        1       9       5   
+     96        1       9       6   
+     97        1       9       7   
+     98        1       9       8   
+     99       -1      -1      -1   
+    100       -1      -1      -1   
+ ----------------------------------
+
+
+ ----------------------------------
+  EVT NO.    LAYER    ROW     COL  
+ ----------------------------------
+     1         1       4       8   
+     2         1       4       9   
+ ----------------------------------
+
+
+ ----------------------------------
+  CHD NO.    LAYER    ROW     COL  
+ ----------------------------------
+     1         1       1       1   
+     2         1       1       2   
+     3         1       1       3   
+     4         1       1       4   
+     5         1       1       5   
+     6         1       1       6   
+     7         1       9       3   
+     8         1       9       4   
+     9         1       9       5   
+     10        1       9       6   
+     11        1       9       7   
+     12        1       9       8   
+ ----------------------------------
+
+
